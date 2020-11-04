@@ -62,12 +62,12 @@ function App() {
         onChange={e => setFormData({ ...formData, 'name': e.target.value})}
         placeholder="Note name"
         value={formData.name}
-      /><br><br>
+      />
       <input
         onChange={e => setFormData({ ...formData, 'description': e.target.value})}
         placeholder="Note description"
         value={formData.description}
-      /><br><br>
+      />
 
       <input
         type="file"
