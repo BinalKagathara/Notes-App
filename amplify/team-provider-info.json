@@ -10,6 +10,11 @@
       "StackName": "amplify-noteapp-dev-144951",
       "StackId": "arn:aws:cloudformation:ap-south-1:563718285576:stack/amplify-noteapp-dev-144951/e96e88e0-1e7e-11eb-9bf7-026238314c96",
       "AmplifyAppId": "d3jlmef54rjozk"
+    },
+    "categories": {
+      "auth": {
+        "noteappe70a343d": {}
+      }
     }
   }
 }
