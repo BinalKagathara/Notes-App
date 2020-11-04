@@ -5,6 +5,7 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { listNotes } from './graphql/queries';
 import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } from './graphql/mutations';
 import { API, Storage } from 'aws-amplify';
+import "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css";
 
 const initialFormState = { name: '', description: '' }
 
@@ -62,26 +63,26 @@ function App() {
         onChange={e => setFormData({ ...formData, 'name': e.target.value})}
         placeholder="Note name"
         value={formData.name}
-      />
+      /><br /><br />
       <input
         onChange={e => setFormData({ ...formData, 'description': e.target.value})}
         placeholder="Note description"
         value={formData.description}
-      />
+      /><br /><br />
 
       <input
         type="file"
         onChange={onChange}
-      />
+      /><br /><br />
       
-      <button onClick={createNote}>Create Note</button>
+      <button onClick={createNote}>Create Note</button><br />
       <div style={{marginBottom: 30}}>
       {
   notes.map(note => (
     <div key={note.id || note.name}>
       <h2>{note.name}</h2>
       <p>{note.description}</p>
-      <button onClick={() => deleteNote(note)}>Delete note</button>
+      <button onClick={() => deleteNote(note)}>Delete note</button><br /><br />
       {
         note.image && <img src={note.image} style={{width: 400}} />
       }
@@ -89,7 +90,9 @@ function App() {
   ))
 }
       </div>
-      <AmplifySignOut />
+      <div className="OuterSignOut">
+      <AmplifySignOut  className="SignOut"/>
+    </div>
     </div>
   );
 }
