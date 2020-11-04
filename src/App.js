@@ -90,9 +90,9 @@ function App() {
   ))
 }
       </div>
-      <div className="OuterSignOut">
-      <AmplifySignOut  className="SignOut"/>
-    </div>
+      
+      <AmplifySignOut />
+    
     </div>
   );
 }
